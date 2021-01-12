@@ -1,4 +1,6 @@
-#include "../utils.h"
+#ifndef NODE_H
+#define NODE_H
+#include "utils.h"
 
 typedef struct A_stm_ *A_stm;
 typedef struct A_exp_ *A_exp;
@@ -40,3 +42,5 @@ struct A_expList_ {
 };
 A_expList A_PairExpList(A_exp head, A_expList tail);
 A_expList A_LastExpList(A_exp last);
+
+#endif

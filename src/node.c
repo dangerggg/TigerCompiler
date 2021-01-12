@@ -43,10 +43,10 @@ A_exp A_OpExp(A_exp lExp, A_exp rExp, A_binop oper) {
 }
 
 A_exp A_EseqExp(A_stm stm, A_exp exp) {
-    A_exp exp = checked_malloc(sizeof(*exp));
-    exp->kind = A_eseqExp;
-    exp->u.eseq.stm = stm; exp->u.eseq.exp = exp;
-    return exp;
+    A_exp newExp = checked_malloc(sizeof(*exp));
+    newExp->kind = A_eseqExp;
+    newExp->u.eseq.stm = stm; newExp->u.eseq.exp = exp;
+    return newExp;
 }
 
 A_expList A_PairExpList(A_exp head, A_expList tail) {
